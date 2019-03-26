@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-mposplugin",
+  "version": "0.0.1",
+  "description": "mpos payment plugin",
+  "cordova": {
+    "id": "cordova-plugin-mposplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbmIndiaMobile/mposplugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "ABM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AbmIndiaMobile/mposplugin/issues"
+  },
+  "homepage": "https://github.com/AbmIndiaMobile/mposplugin#readme"
+}

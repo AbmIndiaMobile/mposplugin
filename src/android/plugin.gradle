@@ -1,0 +1,8 @@
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation files('libs/printersdk.jar')
+    implementation files('libs/mosambeelib_v1.0.0.066.jar')
+}

@@ -1,2 +1,54 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-mposplugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>mposplugin</name><js-module name="mposplugin" src="www/mposplugin.js"><clobbers target="cordova.plugins.mposplugin" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="mposplugin"><param name="android-package" value="cordova-plugin-mposplugin.mposplugin" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file><source-file src="src/android/mposplugin.java" target-dir="src/cordova-plugin-mposplugin/mposplugin" /></platform></plugin>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-mposplugin" version="0.0.1">
+   <name>mposplugin</name>
+   <js-module name="mposplugin" src="www/mposplugin.js">
+      <clobbers target="cordova.plugins.mposplugin" />
+   </js-module>
+     <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="PaymentPlugin">
+            <param name="android-package" value="com.mosambee.jarclientdemo.cordova.PaymentPlugin" />
+         </feature>
+      </config-file>
+	   <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="CustomPlugin">
+            <param name="android-package" value="com.mosambee.jarclientdemo.CustomPlugin" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+     
+	  <framework src="src/android/plugin.gradle" custom="true" type="gradleReference"/>
+	  <source-file src="src/android/com/mosambee/jarclientdemo/cordova/PaymentPlugin.java" target-dir="src/com/mosambee/jarclientdemo/cordova"/>
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/TransactionDetails.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/PaymentActivity.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/MosambeeUtils.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/EUtils.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/EResponse.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/EDownloadUtils.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/EConstants.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/DUKPK2009_CBC.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/cordova/DownloadUtils.java" target-dir="src/com/mosambee/jarclientdemo/cordova" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/CustomPlugin.java" target-dir="src/com/mosambee/jarclientdemo" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/MainActivity.java" target-dir="src/com/mosambee/jarclientdemo" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/Utils.java" target-dir="src/com/mosambee/jarclientdemo" />
+
+	<source-file src="src/android/com/mosambee/jarclientdemo/serial/FileWrite.java" target-dir="src/com/mosambee/jarclientdemo/serial" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/serial/SerialPortIOManage.java" target-dir="src/com/mosambee/jarclientdemo/serial" />
+	<source-file src="src/android/com/mosambee/jarclientdemo/serial/SerialPortService.java" target-dir="src/com/mosambee/jarclientdemo/serial" />
+
+	<source-file src="src/android/com/mosambee/jarclientdemo/android_serialport_api/SerialPortDevice.java" target-dir="src/com/mosambee/jarclientdemo/android_serialport_api" />
+	
+	<source-file src="src/android/jniLibs/armeabi-v7a/libserial_port.so" target-dir="libs/armeabi-v7a/" />
+	<source-file src="src/android/jniLibs/armeabi-v7a/libserial_port1.so" target-dir="libs/armeabi-v7a/" />
+	<source-file src="src/android/jniLibs/armeabi-v7a/libvudroid.so" target-dir="libs/armeabi-v7a/" />
+	<source-file src="src/android/jniLibs/armeabi-v7a/libdsp_serial_port.so" target-dir="libs/armeabi-v7a/" />
+	
+	<source-file src="src/android/jniLibs/x86/libserial_port.so" target-dir="libs/x86/" />
+	<source-file src="src/android/jniLibs/x86/libserial_port1.so" target-dir="libs/x86/" />
+	<source-file src="src/android/jniLibs/x86/libvudroid.so" target-dir="libs/x86/" />
+	<source-file src="src/android/jniLibs/x86/libdsp_serial_port.so" target-dir="libs/x86/" />
+	
+	<source-file src="src/android/libs/mosambeelib_v1.0.0.066.jar" target-dir="libs/" />
+	<source-file src="src/android/libs/printersdk.jar" target-dir="libs/"/>
+   </platform>
+</plugin>
